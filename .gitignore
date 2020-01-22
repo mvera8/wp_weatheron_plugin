@@ -1,0 +1,21 @@
+#Database
+db/
+
+#Node Modules
+node_modules/
+
+#Dist folder
+dist/
+
+#DS_STORE
+**/.DS_Store
+
+#Docker folder
+docker/
+
+#PhpStorm files
+.idea/
+
+##Coding Standars
+.wpcs/
+.jsbeautifyrc

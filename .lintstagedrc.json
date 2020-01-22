@@ -1,0 +1,18 @@
+{
+  "assets/*.css": [
+    "stylelint --fix",
+    "git add"
+  ],
+  "assets/*.scss": [
+    "stylelint --fix --syntax=scss",
+    "git add"
+  ],
+  "assets/*.js": [
+    "eslint --fix",
+    "git add"
+  ],
+  "assets/*.{js,scss,md,html}": [
+    "prettier --write",
+    "git add"
+  ]
+}

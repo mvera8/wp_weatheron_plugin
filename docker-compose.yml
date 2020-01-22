@@ -1,0 +1,39 @@
+version: '2'
+
+services:
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:4.9.8-php5.6-apache
+    volumes:
+      - .:/var/www/html/wp-content/plugins/wp_weatheron_plugin
+      - ./docker/uploads:/var/www/html/wp-content/uploads
+      - ./docker/themes:/var/www/html/wp-content/themes
+    links:
+      - db
+    ports:
+      - "8000:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_PASSWORD: wordpress
+      ACF_SAVE_POINT: /var/www/html/wp-content/plugins/wp_weatheron_plugin/admin/acf-json
+      DEV_ACF_SAVE_POINT: development
+  db:
+    image: mysql:5.7
+    restart: always
+    ports:
+      - 3306
+    volumes:
+      - ./docker/db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: wordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+  console:
+    image: 083638805291.dkr.ecr.us-west-2.amazonaws.com/docker-webpack:latest
+    command: yarn watch
+    volumes:
+      - .:/var/www/theme
+    restart: always
