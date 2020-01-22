@@ -3,4 +3,4 @@
   !*** ./assets/public/js/wp_weatheron_plugin-public.js ***!
   \********************************************************/
 /*! no static exports found */function(e,t){}});
-//# sourceMappingURL=wp_weatheron_plugin-public.ecdf51d3f3a7f2ba558a.js.map
+//# sourceMappingURL=wp_weatheron_plugin-public.0544346998f42c10b169.js.map
