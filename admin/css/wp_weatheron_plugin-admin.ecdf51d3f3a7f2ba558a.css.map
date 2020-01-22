@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./assets/admin/scss/wp_weatheron_plugin-admin.scss"],"names":[],"mappings":"AAKA,MACE,WAAY,C","file":"admin/css/wp_weatheron_plugin-admin.ecdf51d3f3a7f2ba558a.css","sourcesContent":["/**\n * All of the CSS for your admin-specific functionality should be\n * included in this file.\n */\n\n.test {\n  color: green;\n}\n"],"sourceRoot":""}
